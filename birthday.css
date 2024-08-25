@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f7e7d7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; /* Ensures the body covers the full viewport height */
+}
+h1{
+    margin-top : 70px;
+    font-size: 32px;
+    text-align: center;
+    padding: 50px;
+    
+    position: relative;
+    line-height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+}
+
+.candles-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* Full viewport height */
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.candles {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.candle {
+    width: 40px;
+    height: 150px;
+    background: #ffcc00;
+    position: relative;
+    cursor: pointer;
+}
+
+.candle[data-lit="true"]:before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 20px;
+    background: radial-gradient(circle, yellow, orange, red);
+    border-radius: 50%;
+}
+
+.candle[data-lit="false"]:before {
+    display: none;
+}
+
+/* GIF section styling */
+.gif-container {
+    display: none; /* Initially hidden */
+    margin-top: 20px;
+}
+
+.tenor-gif-embed {
+    display: inline-block;
+}
